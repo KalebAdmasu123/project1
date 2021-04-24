@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Search
+{% endblock %}
+
+{% block body %}
+	<h1>Search</h1>
+	<form class="search" action="{{ url_for('books') }}" method="post">
+		<input type="text" name="search-text" value="{{ search }}">
+		<input type="submit" value="Search">
+	</form>
+	
+	{% if books is defined and books|length > 0 %}
+
+		<table class="result">
+			<tr class="header">
+				<td class="grow-20" >ISBN</td>
+				<td class="grow-35">Title</td>
+				<td class="grow-35">Author</td>
+				<td>Action</td>
+			</tr>
+			{% for book in books %}
+				<tr class="book">
+					<td class="grow-20">{{ book.isbn }}</td>
+					<td class="grow-35">{{ book.title }}</td>
+					<td class="grow-35">{{ book.author }}</td>
+					<td><a href="{{ url_for('details', isbn=book.isbn) }}">Details</a></td>
+				
+				</tr>
+			{% endfor %}
+		</table>
+	{% else %}
+		<p>No matches found</p>
+	{% endif %}
+	<p><a href="{{ url_for('index') }}">Return to index</a></p>
+	
+{% endblock %}

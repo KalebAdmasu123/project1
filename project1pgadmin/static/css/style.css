@@ -1,0 +1,38 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#bookblock{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+/* Reviews style */
+.reviews {
+	margin: 50px 30px 0px;
+	width: 50%;
+}
+
+
+
+.reviews li {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 30px 0px;
+	padding: 20px 10px 10px;
+	border: 2px solid #917980;
+	border-radius: 10px;
+}
+
+.reviews li span {
+	background: #917980;
+    padding: 10px;
+	font-size: .85rem;
+	text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+	top: -15px;
+	left: -20px;
+	border: 2px solid #917980;
+	border-radius: 10px;
+}

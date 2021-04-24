@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Index
+{% endblock %}
+
+{% block style %}
+ 
+	 img{
+		 height: 20px;
+	 }
+ 
+
+{% endblock %}
+
+{% block body %}
+
+	<h1>Welcome</h1>
+	<p>You can search books, give any review about the books,we provide abook you can search</p>
+	
+	<div class="functionality">
+		<a href="{{ url_for('books') }}">
+			<div class="functionality-bg"></div>
+			<p>To Find a book click-here</p>
+		</a>
+	</div>
+	<img src="https://library.kissclipart.com/20181219/fyw/kissclipart-english-books-clipart-book-clip-art-da32d8bc3782aaa0.png" style="height: 400px;width: 400px; margin: 15%;border-radius: 50%;display: inline-block;">
+	
+	
+
+	</div>
+	
+{% endblock %}
